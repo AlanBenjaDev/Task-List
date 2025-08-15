@@ -23,8 +23,8 @@ router.post('/subir', autenticarToken, async (req, res) => {
    }
 
    const [result] = await db.query(
-   `INSERT INTO tareas (usuario_id, titulo, descripcion, estado) VALUES (?, ?, ?, ?)`,
-   [usuarioId, titulo, descripcion, estado || 'pendiente']
+   `INSERT INTO tareas (titulo, descripcion, estado) VALUES (?, ?, ?, ?)`,
+   [ titulo, descripcion, estado || 'pendiente']
    );
 
    const [nuevaTarea] = await db.query(
