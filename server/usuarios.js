@@ -7,7 +7,7 @@ import jwt from 'jsonwebtoken';
 import autenticarToken from './autenticacion.js';
 import dotenv from 'dotenv'
 dotenv.config()
-
+const SECRET_KEY = process.env.SECRET_KEY 
 
 const router = express.Router();
 const saltRounds = 10;
