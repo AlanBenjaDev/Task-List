@@ -46,7 +46,7 @@ function Home() {
 
         cargarTareas();
 
-        const socket = new WebSocket(process.env.APP_WS_URL);
+     const socket = new WebSocket(`wss://task-list-trk9.onrender.com`);
 
         socket.onopen = () => {
             console.log('WebSocket conectado');
