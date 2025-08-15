@@ -30,7 +30,7 @@ function Create() {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:3000/api/usuarios/register', {
+      const res = await fetch('https://task-list-trk9.onrender.com/api/usuarios/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user, email, password }),

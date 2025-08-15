@@ -25,7 +25,7 @@ function SubirTarea({ agregarTarea }) {
  const data = { titulo, descripcion, estado };
 
    try {
- const res = await fetch('http://localhost:3000/api/tareas/subir', {
+ const res = await fetch('https://task-list-trk9.onrender.com/api/tareas/subir', {
  method: 'POST',
  
  headers: { 

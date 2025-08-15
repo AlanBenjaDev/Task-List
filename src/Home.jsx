@@ -13,7 +13,7 @@ function Home() {
     useEffect(() => {
         if (!token) return;
 
-        fetch('http://localhost:3000/api/usuarios/perfil', {
+        fetch('https://task-list-trk9.onrender.com/api/usuarios/perfil', {
             headers: { 'Authorization': `Bearer ${token}` }
         })
             .then(res => res.ok ? res.json() : Promise.reject('No autorizado'))
@@ -31,7 +31,7 @@ function Home() {
             setCargando(true);
             setError('');
             try {
-                const res = await fetch('http://localhost:3000/api/tareas/ver', {
+                const res = await fetch('https://task-list-trk9.onrender.com/api/tareas/ver', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 if (!res.ok) throw new Error('Error al cargar');
@@ -89,7 +89,7 @@ function Home() {
 
     const editarTarea = async (id, nuevoEstado) => {
         try {
-            const res = await fetch(`http://localhost:3000/api/tareas/editar/${id}/estado`, {
+            const res = await fetch(`https://task-list-trk9.onrender.com/api/tareas/editar/${id}/estado`, {
                 method: 'PUT',
                 headers: { 
                     'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ function Home() {
 
     const borrarTarea = async (id) => {
         try {
-            const res = await fetch(`http://localhost:3000/api/tareas/borrar/${id}`, {
+            const res = await fetch(`https://task-list-trk9.onrender.com/api/tareas/borrar/${id}`, {
                 method: 'DELETE',
                 headers: { 'Authorization': `Bearer ${token}` },
             });

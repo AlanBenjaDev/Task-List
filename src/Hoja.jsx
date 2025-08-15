@@ -24,7 +24,7 @@ function Hoja({ id, titulo, descripcion, estado, onEditarEstado, onBorrar }) {
   };
 
   return (
-    // 🛑 Diseño de tarjeta más limpio con sombra y colores dinámicos
+    
     <div className={`
         relative border-l-4 p-4 rounded-md shadow-md
         transition-colors duration-300 ease-in-out
