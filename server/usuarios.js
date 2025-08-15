@@ -5,10 +5,13 @@ import rateLimit from 'express-rate-limit';
 import { body, validationResult } from 'express-validator';
 import jwt from 'jsonwebtoken';
 import autenticarToken from './autenticacion.js';
+import dotenv from 'dotenv'
+dotenv.config()
+
 
 const router = express.Router();
 const saltRounds = 10;
-const SECRET_KEY = 'mi_clave_secreta_para_tests';
+
 
 const formLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
